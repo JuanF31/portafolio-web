@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use 'base/variables' as v;
+
+.tech-dock-icon{
+    @each $key, $tech in v.$tech-stack{
+        &.icon-#{$key}{
+            background: map.get($tech, color);
+            color: map.get($tech, text-color);
+        }
+    }
+}
+
+.skill-icon{
+    @each $key, $skill in v.$skill-stack{
+        &.skill-icon-#{$key}{
+            background-color: map.get($skill, bg);
+            color: map.get($skill, color);
+        }
+    }
+}

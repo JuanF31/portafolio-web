@@ -1,0 +1,169 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+footer{
+    position: relative;
+    padding: 6.4rem 0 0;
+    border-top: 0;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: .1rem;
+        background: linear-gradient(90deg, transparent, rgba(56, 189, 248, .55), transparent);
+    }
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.6rem;
+    padding-bottom: 4.8rem;
+
+    @include m.tablet{
+        grid-template-columns: 1.4fr repeat(3, 1fr);
+        gap: 3.2rem;
+    }
+
+    .footer-logo{
+        display: inline-flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 1.6rem;
+
+        .footer-logo-mark{
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.8rem;
+            height: 3.8rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            background: linear-gradient(135deg, v.$primary-accent, v.$secondary-accent);
+            border-radius: 1rem;
+        }
+
+        .footer-brand-name{
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: v.$text-main;
+        }
+    }
+
+    .footer-desc{
+        max-width: 26rem;
+        font-size: 1.4rem;
+        color: v.$text-muted;
+    }
+}
+
+.footer-heading{
+    margin-bottom: 1.8rem;
+    font: 700 1.2rem v.$font-family-consol;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: v.$primary-accent;
+}
+
+.footer-link-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        a{
+            font-size: 1.4rem;
+            color: v.$text-muted;
+            transition: color 0.3s ease;
+
+            &:hover{
+                color: v.$primary-accent;
+            }
+        }
+    }
+}
+
+.footer-cotact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    .footer-contact-item{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+        color: v.$text-muted;
+
+        i{
+            flex-shrink: 0;
+            font-size: 1.8rem;
+            color: v.$primary-accent;
+        }
+    }
+}
+
+.footer-social{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+    @include m.desktop{
+        flex-wrap: nowrap;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.8rem;
+        height: 3.8rem;
+        color: v.$text-main;
+        border: .1rem solid v.$border-color;
+        border-radius: .8rem;
+        transition: .25s;
+    }
+
+    i{
+        font-size: 1.8rem;
+    }
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 2.4rem 0;
+    padding-bottom: calc(2.4rem + env(safe-area-inset-bottom, 0rem));
+    font-size: 1.3rem;
+    text-align: center;
+    color: v.$text-muted;
+    border-top: .1rem solid v.$border-color;
+
+    @include m.tablet{
+        flex-direction: row;
+        text-align: inherit;
+    }
+
+    span{
+        color: v.$primary-accent;
+    }
+
+    .footer-message{
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+    }
+}

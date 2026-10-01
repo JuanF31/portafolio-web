@@ -1,0 +1,17 @@
+@keyframes orb{
+    50%{
+        transform: translate(-3rem, 3rem) scale(1.1);
+    }
+}
+
+@keyframes marquee {
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes cursorBlink {
+    50%{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,137 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.timeline-content{
+    margin-top: 7rem;
+}
+.timeline{
+    position: relative;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: .9rem;
+        top: .6rem;
+        bottom: .6rem;
+        width: .2rem;
+        background: linear-gradient(v.$primary-accent, v.$border-color 45%, transparent);
+    }
+}
+
+
+.timeline-item{
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 3.6rem;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .timeline-dot{
+        position: absolute;
+        left: 0;
+        top: .4rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: v.$card-bg;
+        border: .2rem solid v.$primary-accent;
+    }
+
+    &.current{
+        .timeline-dot{
+            background-color: v.$primary-accent;
+            box-shadow: 0 0 0 .4rem rgba(56, 189, 248, .18), 0 0 1.4rem rgba(56, 189, 248, .7);
+            @include m.pulse-animation(#38bdf880);
+        }
+        .timeline-card{
+            background-color: rgba(30, 41, 59, .9);
+            border-color: rgba(56, 189, 248, .5);
+            box-shadow: 0 2rem 5rem -2.2rem rgba(56, 189, 248, .45);
+
+            &::after{
+                content: 'ACTUAL';
+                position: static;
+                display: inline-block;
+                margin-bottom: 1rem;
+                padding: .3rem 1rem;
+                font: 700 1.1rem v.$font-family-consol;
+                letter-spacing: .12em;
+                color: #4ADE80;
+                background: rgba(34, 197, 94, .1);
+                border: .1rem solid rgba(34, 197, 94, .4);
+                border-radius: 99.9rem;
+
+                @include m.phone-lg{
+                    position: absolute;
+                    top: 1.8rem;
+                    right: 1.8rem;
+                    display: inline;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.timeline-card{
+    position: relative;
+    padding: 2.4rem 2.6rem;
+    background-color: v.$card-bg;
+    border: .1rem solid v.$border-color;
+    border-radius: 1.6rem;
+
+    &:hover{
+        transform: translateX(.6rem);
+    }
+
+    .timeline-role{
+        margin-bottom: .4rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: v.$text-main;
+    }
+
+    .timeline-meta{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .8rem 1.6rem;
+        margin-bottom: 1.4rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: v.$primary-accent;
+
+        span:last-child{
+            padding: .2rem 1rem;
+            font: 600 1.25rem v.$font-family-consol;
+        }
+    }
+}
+
+.timeline-list{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    li{
+        position: relative;
+        padding-left: 1.6rem;
+        font-size: 1.45rem;
+        color: v.$text-muted;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: .9rem;
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            background-color: v.$secondary-accent;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+
+.contact-terminal{
+    background-color: v.$card-bg;
+    border: .1rem solid rgba(56, 189, 248, .3);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 7rem -2.5rem rgba(56, 189, 248, .35);
+}
+
+.terminal-body{
+    padding: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    line-height: 2;
+    color: v.$text-main;
+    text-align: left;
+
+    .term-prompt{
+        margin-right: .6rem;
+        color: v.$primary-accent;
+    }
+    .term-output{
+        margin-bottom: .8rem;
+        color: v.$text-muted;
+
+        &.term-success{
+            color: #4ade80;
+        }
+    }
+    .terminal-btn{
+        display: block;
+        width: 100%;
+        margin-top: .8rem;
+        text-align: center;
+        font-family: v.$font-family;
+        box-shadow: 0 .6rem 1.6rem -.8rem rgba(56, 189, 248, .35);
+
+        &:hover{
+            box-shadow: 0 .8rem 2rem -.8rem rgba(56, 189, 248, .5);
+        }
+    }
+}
+
+.type-cursor{
+    display: inline-block;
+    width: 0.55em;
+    height: 1.05em;
+    margin-left: .2rem;
+    vertical-align: text-bottom;
+    background-color: v.$primary-accent;
+    animation: cursorBlink 1s steps(1) infinite;
+}

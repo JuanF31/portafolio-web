@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0rem);
+    z-index: v.$z-fixed;
+    border-bottom: .1rem solid v.$border-color;
+    transition: box-shadow 0.3s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba(15, 23, 42, .72);
+        -webkit-backdrop-filter: blur(1.4rem);
+        backdrop-filter: blur(1.4rem);
+    }
+
+    &.scroll-header {
+        box-shadow: 0 .4rem 2rem rgba(0, 0, 0, 0.35);
+    }
+}

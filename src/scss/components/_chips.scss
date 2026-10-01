@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+
+.section-name,
+.box-number,
+.timeline-meta span:last-child{
+    color: v.$primary-accent;
+    border: .1rem solid rgba(56, 189, 248, .35);
+    border-radius: .6rem;
+    background: rgba(56, 189, 248, .08);
+}
+
+.section-name{
+    display: block;
+    width: max-content;
+    margin: 0 auto 1.4rem;
+    padding: .4rem 1.2rem;
+    font: 700 1.2rem v.$font-family-consol;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}

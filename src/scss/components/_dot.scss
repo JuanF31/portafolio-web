@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+
+.dot{
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@each $name, $color in v.$dot-colors{
+    .dot-#{$name} {
+        background-color: $color;
+    }
+}
+

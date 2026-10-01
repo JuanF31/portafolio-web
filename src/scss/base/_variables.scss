@@ -1,0 +1,204 @@
+// --- FONT FAMILY ---
+$font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+$font-family-consol: ui-monospace, Consolas, monospace;
+
+
+// --- COLORS ---
+$primary-accent: #38bdf8;
+$text-muted: #94a3b8;
+$text-main: #f8fafc;
+$bg-color: #0f172a;
+$container-color: #FFF;
+$border-color: #334155;
+$secondary-accent: #818cf8;
+$card-bg: #1e293b;
+
+$dot-colors: (
+    "red": #ef4444,
+    "yellow": #eab308,
+    "green": #22c55e
+);
+
+
+$normal-font-size: 1.6rem;
+$title-section-size: 2.8rem;
+
+$z-index: 100;
+$z-fixed-150: 150;
+$z-fixed: 200;
+$z-bottom-layer: -1;
+$z-top-layer: 300;
+
+$header-h: 5.7rem;
+$mx: var(--mx, 50%);
+$my: var(--my, 0);
+
+// --- ICONS ---
+$tech-stack: (
+  "html": (
+    color: #e34f26,
+    text-color: $container-color,
+    icon: "bxl-html5",
+    label: "HTML"
+  ),
+  "js": (
+    color: #f7df1e,
+    text-color: #1e1e1e,
+    icon: null,
+    label: "JS"
+  ),
+  "csharp": (
+    color: #9b4f96,
+    text-color: $container-color,
+    icon: null,
+    label: "C#"
+  ),
+  "php": (
+    color: #777bb4,
+    text-color: $container-color,
+    icon: "bxl-php",
+    label: "PHP"
+  ),
+  "sql": (
+    color: #00758f,
+    text-color: $container-color,
+    icon: "bx-data",
+    label: "SQL"
+  )
+);
+
+
+$skill-stack: (
+  "html" : (
+    color: #ed8d72,
+    bg: rgba(237, 141, 114, 0.14)
+  ),
+  "css" : (
+    color: #67a3d0,
+    bg: rgba(103, 163, 208, 0.14)
+  ),
+  "js" : (
+    color: #f7df1e,
+    bg: rgba(247, 223, 30, 0.14)
+  ),
+  "bs" : (
+    color: #a179dc,
+    bg: rgba(161, 121, 220, 0.14)
+  ),
+  "csharp" : (
+    color: #8e75e3,
+    bg: rgba(142, 117, 227, 0.14)
+  ),
+  "php" : (
+    color: #a7a9ce,
+    bg: rgba(167, 169, 206, 0.14)
+  ),
+  "laravel" : (
+    color: #ff766e,
+    bg: rgba(255, 118, 110, 0.14)
+  ),
+  "sql" : (
+    color: #38bdf8,
+    bg: rgba(56, 189, 248, 0.14)
+  ),
+  "mysql" : (
+    color: #85a8c2,
+    bg: rgba(133, 168, 194, 0.14)
+  ),
+  "git-github" : (
+    color: #f58d7a,
+    bg: rgba(245, 141, 122, 0.14)
+  ),
+  "npm" : (
+    color: #dd7e7d,
+    bg: rgba(221, 126, 125, 0.14)
+  ),
+  "vs-vsc" : (
+    color: #59a9de,
+    bg: rgba(89, 169, 222, 0.14)
+  ),
+  "xampp-laragon" : (
+    color: #fb7a24,
+    bg: rgba(251, 122, 36, 0.14)
+  ),
+  "android-studio" : (
+    color: #3ddc84,
+    bg: rgba(61, 220, 132, 0.14)
+  ),
+  "windows" : (
+    color: #59a7e3,
+    bg: rgba(89, 167, 227, 0.14)
+  ),
+  "macos" : (
+    color: #e2e8f0,
+    bg: rgba(226, 232, 240, 0.14)
+  ),
+  "ubuntu" : (
+    color: #f1906e,
+    bg: rgba(241, 144, 110, 0.14)
+  ),
+  "office" : (
+    color: #e6805a,
+    bg: rgba(230, 128, 90, 0.14)
+  ),
+  "mtto-preventivo" : (
+    color: #94a3b8,
+    bg: rgba(148, 163, 184, 0.14)
+  ),
+  "mtto-correctivo" : (
+    color: #94a3b8,
+    bg: rgba(148, 163, 184, 0.14)
+  ),
+  "cctv" : (
+    color: #94a3b8,
+    bg: rgba(148, 163, 184, 0.14)
+  ),
+  "teamviewer" : (
+    color: #62b6f1,
+    bg: rgba(98, 182, 241, 0.14)
+  ),
+  "anydesk" : (
+    color: #f58580,
+    bg: rgba(245, 133, 128, 0.14)
+  ),
+  "rustdesk" : (
+    color: #77aaf9,
+    bg: rgba(119, 170, 249, 0.14)
+  ),
+  "illustrator" : (
+    color: #ff9a00,
+    bg: rgba(255, 154, 0, 0.14)
+  ),
+  "photoshop" : (
+    color: #31a8ff,
+    bg: rgba(49, 168, 255, 0.14)
+  ),
+  "coreldraw" : (
+    color: #2da94f,
+    bg: rgba(45, 169, 79, 0.14)
+  ),
+  "poo" : (
+    color: #818cf8,
+    bg: rgba(129, 140, 248, 0.14)
+  ),
+  "mvc" : (
+    color: #818cf8,
+    bg: rgba(129, 140, 248, 0.14)
+  ),
+  "responsivo" : (
+    color: #38bdf8,
+    bg: rgba(56, 189, 248, 0.14)
+  ),
+  "mobile-first" : (
+    color: #38bdf8,
+    bg: rgba(56, 189, 248, 0.14)
+  ),
+
+  
+);
+  
+
+
+
+
+

@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+
+
+.code-mockup,
+.about,
+.about-stat,
+.timeline-card,
+.contact-row,
+.contact-terminal,
+.footer-contact-item{
+    transition: border-color .3s, transform .3s, box-shadow .3s;
+    background-image: radial-gradient(34rem circle at v.$mx v.$my, rgba(56, 189, 248, .08),  transparent 60%);
+}
+
+.about-stat,
+.skill-box,
+.timeline-card,
+.contact-row {
+    &:hover{
+        border-color: rgba(56, 189, 248, .45);
+        box-shadow: 0 14px 36px -16px rgba(56, 189, 248, .4);
+    }
+}
+
+.about-stat,
+.skill-box,
+.contact-row{
+    &:hover{
+        transform: translateY(-.3rem);
+    }
+}
+
+.social-link,
+.footer-social a{
+    &:hover{
+        color: v.$primary-accent;
+        transform: translateY(-.3rem);
+        box-shadow: 0 .8rem 2rem -.6rem rgba(56, 189, 248, .6);
+        border-color: v.$primary-accent;
+        background-color: rgba(56, 189, 248, .1);
+    }
+}
+
+.reveal{
+    opacity: 0;
+    transform: translateY(2.4rem);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.is-visible{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
