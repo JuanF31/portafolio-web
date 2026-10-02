@@ -31,3 +31,4 @@ function dev(){
 }
 
 exports.dev = dev;
+exports.img = images;
