@@ -94,3 +94,20 @@ document.querySelectorAll('.about,.timeline-card,.about-stat,.skill-box,.contact
     addEventListener('scroll', u, { passive: true })
     u()
 })()
+
+// LLOADER
+            var loader = document.getElementById('loader');
+            if (loader) {
+                var t = Date.now(), hidden = false;
+                var hideLoader = function () {
+                    if (hidden) return;
+                    hidden = true;
+                    setTimeout(function () {
+                        loader.classList.add('is-hidden');
+                        setTimeout(function () { loader.remove(); }, 600);
+                    }, Math.max(0, 500 - (Date.now() - t)));
+                };
+                if (document.readyState === 'complete') hideLoader();
+                else window.addEventListener('load', hideLoader);
+                setTimeout(hideLoader, 5000); /* seguro por si algún recurso tarda demasiado */
+            }
