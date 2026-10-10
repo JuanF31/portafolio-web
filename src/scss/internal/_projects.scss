@@ -1,0 +1,139 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+#projects{
+    position: relative;
+    isolation: isolate;
+
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 100vw;
+        transform: translateX(-50%);
+        background: rgba(v.$deep-rgb, .55);
+        border-top: .1rem solid v.$border-color;
+        border-bottom: .1rem solid v.$border-color;
+    }
+}
+
+.project-list{
+    display: flex;
+    flex-direction: column;
+    gap: 5.6rem;
+    max-width: 104rem;
+    margin: 0 auto;
+
+    @include m.tablet{
+        gap: 8rem;
+    }
+
+    .project{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.6rem;
+        align-items: center;
+
+        @include m.tablet{
+            grid-template-columns: 1.15fr 1fr;
+            gap: 4.8rem;
+        }
+
+        &:nth-child(even) .preview{
+            order: 2;
+        }
+
+        .project-name{
+            font: 700 1.2rem v.$font-family-consol;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: v.$primary-accent;
+        }
+    }
+}
+
+
+.project-title{
+    h3{
+        margin: .8rem 0 1.2rem;
+        font-size: 2.6rem;
+        line-height: 1.2;
+    }
+    p{
+        font-size: 1.5rem;
+        line-height: 1.65;
+        color: v.$text-muted;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .8rem;
+        margin-top: 1.8rem;
+
+        li{
+            padding: .4rem 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: v.$secondary-accent;
+            background-color: rgba(v.$accent2-rgb, .12);
+            border: .1rem solid rgba(v.$accent2-rgb, .32);
+            border-radius: 9.9rem;
+        }
+    }
+}
+
+.project-link{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: v.$bg-color;
+    background: v.$primary-accent;
+    border-radius: 1rem;
+    vertical-align: top;
+}
+
+
+.preview{
+    position: relative;
+    overflow: hidden;
+    background: v.$card-bg;
+    border: .1rem solid v.$border-color;
+    border-radius: 1.2rem;
+    box-shadow: 0 3rem 6rem -2.5rem rgba(0, 0, 0, .7), 0 0 0 .1rem rgba(v.$accent-rgb, .06);
+    transition: border-color .3s, transform .4s, box-shadow .4s;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-.3rem);
+        border-color: rgba(v.$accent-rgb, .45);
+        box-shadow: 0 3rem 6rem -2rem rgba(v.$accent-rgb, .35), 0 0 0 .1rem rgba(v.$accent-rgb, .2);
+    }
+
+    .preview-body{
+        position: relative;
+        display: block;
+        gap: 1.4rem;
+        min-height: 0;
+        padding: 0;
+        aspect-ratio: 16/10;
+    }
+    .preview-image{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        background: v.$bg-deep;
+        border-radius: 1.2rem;
+    }
+}
+
+
+
