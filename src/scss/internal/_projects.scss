@@ -44,7 +44,9 @@
         }
 
         &:nth-child(even) .preview{
-            order: 2;
+            @include m.tablet{
+                order: 2;
+            }
         }
 
         .project-name{
