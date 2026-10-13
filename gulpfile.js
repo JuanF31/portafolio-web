@@ -18,17 +18,20 @@ function css( done ){
     done();
 }
 
-function images(){
-    return src('src/img/**/*')
-        .pipe(imagemin({optimizationLevel: 3}))
-        .pipe(dest('build/img'));
+function images( ){
+    return src('src/img/**/*', { encoding: false })
+        .pipe( imagemin({ optimizationLevel: 3 }) )
+        .pipe( dest('build/img') );
 }
+
+
 
 function dev(){
     watch('src/scss/**/*.scss', css);
     watch('src/img/**/*', images);
-    
 }
 
 exports.dev = dev;
-exports.img = images;
+exports.images = images;
+
+exports.default = series( images, css, dev );
