@@ -4,10 +4,14 @@ import { Reveal } from './modules/reveal.js';
 import { Active } from './modules/scrollActive.js'; 
 import { Spotlight } from './modules/spotlight.js';
 import { Progress } from './modules/progressBar.js';
+import { Writer } from './modules/textChange.js';
+import { Top } from './modules/toTop.js';
 
 const header = Header();
 Active(header);
 Reveal();
 Spotlight();
 Progress();
+Writer();
+Top();
 Loader();

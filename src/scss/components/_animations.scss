@@ -21,3 +21,26 @@
         transform: rotate(360deg);
     }
 }
+@keyframes scrollWheel { 
+    0% { 
+        opacity: 0; transform: translateY(0); 
+    } 
+    30% { 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(1.4rem); 
+    } 
+}
+@keyframes scrollArrow { 
+    0%, 
+    100% { 
+        transform: translateY(-.3rem); opacity: .5; 
+    } 
+    50% { 
+        transform: translateY(.3rem); opacity: 1; 
+    } 
+}
+
+

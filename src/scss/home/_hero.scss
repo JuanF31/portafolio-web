@@ -102,6 +102,17 @@
             background-clip: text;
             color: transparent;
         }
+        .text-real {
+            background-color: red;
+            display: inline-block;
+            width: .3rem;
+            height: .85em;
+            margin-left: .4rem;
+            vertical-align: baseline;
+            background: v.$secondary-accent;
+            border-radius: .2rem;
+            animation: cursorBlink 1s steps(1) infinite;
+        }
     }
 
     .hero-subtitle{
