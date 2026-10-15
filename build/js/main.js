@@ -6,6 +6,7 @@ import { Spotlight } from './modules/spotlight.js';
 import { Progress } from './modules/progressBar.js';
 import { Writer } from './modules/textChange.js';
 import { Top } from './modules/toTop.js';
+import { Copy } from './modules/copy.js';
 
 const header = Header();
 Active(header);
@@ -14,4 +15,5 @@ Spotlight();
 Progress();
 Writer();
 Top();
+Copy();
 Loader();

@@ -33,14 +33,3 @@
         transform: translateY(1.4rem); 
     } 
 }
-@keyframes scrollArrow { 
-    0%, 
-    100% { 
-        transform: translateY(-.3rem); opacity: .5; 
-    } 
-    50% { 
-        transform: translateY(.3rem); opacity: 1; 
-    } 
-}
-
-

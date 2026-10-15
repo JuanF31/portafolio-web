@@ -3,7 +3,7 @@
 
 :root{
     @include m.tablet{
-        --header-h: 7.1rem;          // respaldo escritorio
+        --header-h: 7.1rem;
     }
 }
 *, *:before, *:after{
