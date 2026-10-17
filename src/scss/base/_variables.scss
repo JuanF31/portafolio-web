@@ -2,6 +2,19 @@
 $font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 $font-family-consol: ui-monospace, Consolas, monospace;
 
+$normal-font-size: 1.6rem;
+$title-section-size: 2.8rem;
+
+$z-index: 100;
+$z-fixed-150: 150;
+$z-fixed: 200;
+$z-bottom-layer: -1;
+$z-top-layer: 300;
+
+$header-h: 5.7rem;
+$mx: var(--mx, 50%);
+$my: var(--my, 0);
+
 
 // --- COLORS ---
 $primary-accent: #38bdf8;
@@ -18,6 +31,11 @@ $accent2-rgb: rgb(129, 140, 248);
 $bg-deep: #0b1220;
 $border-strong: #475569;
 $bg-rgb: rgb(15, 23, 42);
+$border-strong: #475569;
+$ok: #4ade80;
+
+$skill-box-colors: #38bdf8, #a88fce, #4ade80, #ff9a00;
+
 
 
 $dot-colors: (
@@ -25,21 +43,6 @@ $dot-colors: (
     "yellow": #eab308,
     "green": #22c55e
 );
-
-
-$normal-font-size: 1.6rem;
-$title-section-size: 2.8rem;
-
-$z-index: 100;
-$z-fixed-150: 150;
-$z-fixed: 200;
-$z-bottom-layer: -1;
-$z-top-layer: 300;
-
-$header-h: 5.7rem;
-$mx: var(--mx, 50%);
-$my: var(--my, 0);
-
 // --- ICONS ---
 $tech-stack: (
   "html": (
@@ -216,11 +219,16 @@ $skill-stack: (
     color: #e8696b,
     bg: rgba(232, 105, 107, 0.14)
   ),
+  "capcut" : (
+    color: #94a3b8,
+    bg: rgba(148, 163, 184, 0.16)
+  ),
+  "canva" : (
+    color: #00c4cc,
+    bg: rgba(0, 196, 204, 0.14)
+  )
   
 );
   
-
-
-
 
 

@@ -1,6 +1,7 @@
 @use 'variables' as v;
 
 
+
 @mixin phone-sm{
     @media (min-width: 321px) {
         @content;
@@ -76,5 +77,30 @@
         } 50% {
             transform: translateY(-1rem);
         }
+    }
+}
+
+
+@mixin skill-box-color($c){
+    &::before{
+        background: linear-gradient(90deg, $c, transparent 70%);
+    }
+    &::after{
+        background: radial-gradient(circle, rgba($c, .22), transparent 70%);
+    }
+
+    &:hover{
+        border-color: color-mix(in srgb, $c 55%, v.$border-color);
+    }
+
+    .skill-head-icon{
+        color: $c;
+        background: rgba($c, .16);
+        border-color: rgba($c, .5);
+    }
+
+    .skill-count{
+        color: $c;
+        border-color: rgba($c, .4);
     }
 }

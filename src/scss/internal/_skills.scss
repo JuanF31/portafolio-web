@@ -1,6 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 @use "sass:map";
+@use "sass:list";
 
 .skill-icon{
     flex-shrink: 0;
@@ -67,12 +68,40 @@
 }
 
 .box-grid{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1.6rem;
+    max-width: 180rem;
+    margin: 0 auto;
 
-    @include m.tablet {
+    @include m.tablet{
+        display: grid;
         grid-template-columns: repeat(6, 1fr);
+    }
+
+    .box-list{
+        position: relative;
+        z-index: v.$z-index;
+    }
+
+    .skill-box{
+        padding: 2.6rem;
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: .3rem;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: -6rem;
+            top: -6rem;
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            pointer-events: none;
+        }
     }
 }
 
@@ -82,39 +111,64 @@
     border: .1rem solid v.$border-color;
     border-radius: 1.8rem;
     overflow: hidden;
-    background: radial-gradient(36rem circle at v.$mx v.$my, rgba(56, 189, 248, .10), transparent 60%), v.$card-bg;
+    background: radial-gradient(36rem circle at v.$mx v.$my, rgba(v.$accent-rgb, .10), transparent 60%), v.$card-bg;
     transition: border-color .3s, transform .3s;
 
-    @include m.tablet{
-        @each $span in (2, 3, 4){
-            &--#{$span}{
+    @each $span in (2, 3, 4){
+        &--#{$span}{
+            @include m.tablet{
                 grid-column: span $span;
             }
         }
     }
 
-    .box-header {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: .4rem 1.2rem;
-        margin-bottom: 1.8rem;
+    @for $i from 1 through list.length(v.$skill-box-colors){
+        &:nth-child(#{$i}){
+            @include m.skill-box-color(list.nth(v.$skill-box-colors, $i));
+        }
+    }
+}
 
-        h3 {
+.skill-head{
+    position: relative;
+    z-index: v.$z-index;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 2rem;
+
+    .skill-head-icon{
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        width: 4.6rem;
+        height: 4.6rem;
+        font-size: 2.4rem;
+        border: .1rem solid transparent;
+        border-radius: 1.4rem;
+    }
+
+    .skill-title{
+        flex: 1;
+        min-width: 0;
+
+        h3{
             font-size: 1.8rem;
             font-weight: 800;
+            line-height: 1.2;
         }
-
-        p {
-            flex-basis: 100%;
-            font-size: 1.4rem;
+        p{
+            margin-top: .2rem;
+            font-size: 1.25rem;
             color: v.$text-muted;
         }
     }
 
-    .box-number{
-        padding: .3rem .8rem;
-        font: 700 1.2rem v.$font-family-consol;
+    .skill-count{
+        padding: .4rem 1rem;
+        font: 800 1.3rem v.$font-family-consol;
+        border: .1rem solid transparent;
+        border-radius: 99.9rem;
     }
 }
 
@@ -130,7 +184,7 @@
         padding: .5rem 1.2rem .5rem .5rem;
         font-size: 1.35rem;
         font-weight: 600;
-        background: rgba(15, 23, 24, .75);
+        background: rgba(v.$bg-rgb, .75);
         border: .1rem solid v.$border-color;
         border-radius: 1.1rem;
         transition: .25s;
@@ -143,9 +197,12 @@
                 border-color: map.get($skill, color);
             }
         }
-        
-        &[data-lv="3"]{
+        &[data-lv="3"] {
             border-color: rgba(74, 222, 128, .35);
+        }
+        &[data-lv="0"]{
+            border-style: dashed;
+            border-color: rgba(v.$accent2-rgb, .55);
         }
 
         .skill-icon{
@@ -161,29 +218,10 @@
                 font-size: 2rem;
             }
         }
+        
     }
 }
 
-.box-legend{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: .8rem 2.2rem;
-    max-width: 180rem;
-    margin: 1.6rem auto 0;
-    font-size: 1.3rem;
-    color: v.$text-muted;
-
-    @include m.tablet{
-        justify-content: flex-end;
-    }
-
-    span{
-        display: inline-flex;
-        align-items: center;
-        gap: .8rem;
-    }
-}
 
 .skill-dots{
     display: inline-flex;
@@ -199,17 +237,50 @@
 }
 
 .skill-lv-3{
-    i:nth-child(-n+3){
-        background-color: #4ADE80;
+    i{
+        &:nth-child(-n+3){
+            background-color: v.$ok;
+        }
     }
 }
 .skill-lv-2{
-    i:nth-child(-n+2){
-        background-color: v.$primary-accent;
+    i{
+        &:nth-child(-n+2){
+            background-color: v.$primary-accent;
+        }
     }
 }
 .skill-lv-1{
-    i:nth-child(-n+1){
-        background-color: v.$text-muted;
+    i{
+        &:nth-child(-n+1){
+            background-color: v.$text-muted;
+        }
+    }
+}
+.skill-lv-0{
+    i{
+        background-color: transparent;
+        box-shadow: inset 0 0 0 .15rem v.$secondary-accent;
+    }
+}
+
+
+.box-legend{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .8rem 2.2rem;
+    margin: 1.6rem auto 0;
+    font-size: 1.3rem;
+    color: v.$text-muted;
+
+    @include m.tablet{
+        justify-content: flex-end;
+    }
+
+    span{
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
     }
 }
