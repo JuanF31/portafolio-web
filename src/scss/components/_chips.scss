@@ -4,9 +4,9 @@
 .box-number,
 .timeline-meta span:last-child{
     color: v.$primary-accent;
-    border: .1rem solid rgba(56, 189, 248, .35);
+    border: .1rem solid rgba(v.$accent-rgb, .35);
     border-radius: .6rem;
-    background: rgba(56, 189, 248, .08);
+    background: rgba(v.$accent-rgb, .08);
 }
 
 .section-name{

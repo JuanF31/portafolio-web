@@ -1,7 +1,8 @@
-// --- FONT FAMILY ---
+// // ========= TYPOGRAPHY  ========= //
 $font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 $font-family-consol: ui-monospace, Consolas, monospace;
 
+// ========= GLOBALS ========= //
 $normal-font-size: 1.6rem;
 $title-section-size: 2.8rem;
 
@@ -15,40 +16,57 @@ $header-h: 5.7rem;
 $mx: var(--mx, 50%);
 $my: var(--my, 0);
 
+// ========= BACKGROUNDS ========= //
+$bg-color: var(--bg-color);
+$card-bg: var(--card-bg);
+$bg-deep: var(--bg-deep);
+$bg-deeper: var(--bg-deeper);
+$bg-darkest: var(--bg-darkest);
 
-// --- COLORS ---
-$primary-accent: #38bdf8;
-$text-muted: #94a3b8;
-$text-main: #f8fafc;
-$bg-color: #0f172a;
-$container-color: #FFF;
-$border-color: #334155;
-$secondary-accent: #818cf8;
-$card-bg: #1e293b;
-$accent-rgb: rgb(56, 189, 248);
-$deep-rgb: rgb(11, 18, 32);
-$accent2-rgb: rgb(129, 140, 248);
-$bg-deep: #0b1220;
-$border-strong: #475569;
-$bg-rgb: rgb(15, 23, 42);
-$border-strong: #475569;
-$ok: #4ade80;
-$card-rgb: rgb(30, 41, 59);
+// ========= TEXTS ========= //
+$text-main: var(--text-main);
+$text-muted: var(--text-muted);
 
+// ========= BORDERS ========= //
+$border-color: var(--border-color);
+$border-strong: var(--border-strong);
+
+// ========= ACCENTS ========= //
+$primary-accent: var(--primary-accent);
+$secondary-accent: var(--secondary-accent);
+$accent-soft: var(--accent-soft);
+$accent-hover: (--accent-hover);
+$on-accent: var(--on-accent);
+
+// ========= RGB COLORS ========= //
+$accent-rgb: var(--accent-rgb);
+$accent2-rgb: var(--accent2-rgb);
+$bg-rgb: var(--bg-rgb);
+$card-rgb: var(--card-rgb);
+$muted-rgb: var(--muted-rgb);
+$deep-rgb: var(--deep-rgb);
+$overlay-rgb: var(--overlay-rgb);
+$shadow-rgb: var(--shadow-rgb);
+
+// ========= STATUS ========= //
+$ok: var(--ok);
+
+// ========= SKILLBOX COLORS ========= //
 $skill-box-colors: #38bdf8, #a88fce, #4ade80, #ff9a00;
 
-
-
+// ========= DOT MOCKUP ========= //
 $dot-colors: (
     "red": #ef4444,
     "yellow": #eab308,
     "green": #22c55e
 );
-// --- ICONS ---
+
+
+// ========= ICONS TECH ========= //
 $tech-stack: (
   "html": (
     color: #e34f26,
-    text-color: $container-color,
+    text-color: $text-main,
     icon: "bxl-html5",
     label: "HTML"
   ),
@@ -60,25 +78,25 @@ $tech-stack: (
   ),
   "csharp": (
     color: #9b4f96,
-    text-color: $container-color,
+    text-color: $text-main,
     icon: null,
     label: "C#"
   ),
   "php": (
     color: #777bb4,
-    text-color: $container-color,
+    text-color: $text-main,
     icon: "bxl-php",
     label: "PHP"
   ),
   "sql": (
     color: #00758f,
-    text-color: $container-color,
+    text-color: $text-main,
     icon: "bx-data",
     label: "SQL"
   )
 );
 
-
+// ========= ICONS SKILLS ========= //
 $skill-stack: (
   "html" : (
     color: #ed8d72,

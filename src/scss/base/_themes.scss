@@ -1,0 +1,81 @@
+/* ========== DEFAULT THEME ========== */
+:root{
+    color-scheme: dark;
+    --bg-color: #0F172A;
+    --card-bg: #1E293B;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --border-color: #334155;
+    --primary-accent: #38BDF8;
+    --secondary-accent: #818CF8;
+
+    --accent-rgb: 56, 189, 248;
+    --accent2-rgb: 129, 140, 248;
+    --bg-rgb: 15, 23, 42;
+    --card-rgb: 30, 41, 59;
+    --muted-rgb: 148, 163, 184;
+    --deep-rgb: 11, 18, 32;
+    --overlay-rgb: 255, 255, 255;
+    --shadow-rgb: 0, 0, 0;
+
+    --bg-deep: #0B1220;
+    --bg-deeper: #111A2E;
+    --bg-darkest: #060B16;
+    --border-strong: #475569;
+    --accent-soft: #7DD3FC;
+    --accent-hover: var(--accent-soft);
+    --on-accent: #0F172A;
+    --ok: #4ADE80;
+}
+
+/* ========== EMERALD THEME ========== */
+:root[data-theme="esmerald"]{
+    --bg-color: #0A1512;
+    --card-bg: #12231E;
+    --text-main: #ECFDF5;
+    --text-muted: #8FB3A6;
+    --border-color: #24403A;
+    --primary-accent: #34D399;
+    --secondary-accent: #2DD4BF;
+
+    --accent-rgb: 52, 211, 153;
+    --accent2-rgb: 45, 212, 191;
+    --bg-rgb: 10, 21, 18;
+    --card-rgb: 18, 35, 30;
+    --muted-rgb: 143, 179, 166;
+    --deep-rgb: 7, 16, 13;
+    --overlay-rgb: 255, 255, 255;
+
+    --bg-deep: #07100D;
+    --bg-deeper: #0E1C18;
+    --bg-darkest: #040B09;
+    --border-strong: #3B5E55;
+    --accent-soft: #6EE7B7;
+    --on-accent: #052E22;
+}
+
+/* ========== SUNSET THEME ========== */
+:root[data-theme="sunset"]{
+    --bg-color: #1A1015;
+    --card-bg: #281A22;
+    --text-main: #FFF7ED;
+    --text-muted: #C4A8A0;
+    --border-color: #4A3037;
+    --primary-accent: #FB923C;
+    --secondary-accent: #F472B6;
+
+    --accent-rgb: 251, 146, 60;
+    --accent2-rgb: 244, 114, 182;
+    --bg-rgb: 26, 16, 21;
+    --card-rgb: 40, 26, 34;
+    --muted-rgb: 196, 168, 160;
+    --deep-rgb: 18, 10, 14;
+    --overlay-rgb: 255, 255, 255;
+
+    --bg-deep: #120A0E;
+    --bg-deeper: #20141B;
+    --bg-darkest: #0C0609;
+    --border-strong: #6B4A52;
+    --accent-soft: #FDBA74;
+    --on-accent: #2A1105;
+}

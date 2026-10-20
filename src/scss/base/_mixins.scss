@@ -33,7 +33,7 @@
     }
 }
 
-@mixin pulse-animation($color: #22c55e) {
+@mixin pulse-animation($color: v.$ok) {
   $pulse-color: rgba($color, 0.6);
   animation: pulse 2s infinite;
 

@@ -39,10 +39,10 @@ body{
             z-index: -1;
             pointer-events: none;
             mask: linear-gradient(#000 60%, transparent);
-            background: radial-gradient(70rem circle at 85% -5%, rgba(109, 180, 220, .06), transparent 60%),
-                        radial-gradient(60rem circle at 0% 45%, rgba(152, 163, 224, .04), transparent 60%),
-                        linear-gradient(rgba(148, 163, 184, .03) .1rem, transparent .1rem) 0 0/5.2rem 5.2rem,
-                        linear-gradient(90deg, rgba(148, 163, 184, .03) .1rem, transparent .1rem) 0 0/5.2rem 5.2rem; 
+            background: radial-gradient(70rem circle at 85% -5%, rgba(v.$accent-rgb, .06), transparent 60%),
+                        radial-gradient(60rem circle at 0% 45%, rgba(v.$accent-rgb, .04), transparent 60%),
+                        linear-gradient(rgba(v.$muted-rgb, .03) .1rem, transparent .1rem) 0 0/5.2rem 5.2rem,
+                        linear-gradient(90deg, rgba(v.$muted-rgb, .03) .1rem, transparent .1rem) 0 0/5.2rem 5.2rem; 
         }
 }
 
@@ -55,7 +55,7 @@ body{
     background: v.$primary-accent;
     height: .3rem;
     opacity: 1;
-    box-shadow: 0 0 1.2rem rgba(56, 189, 248, .8);
+    box-shadow: 0 0 1.2rem rgba(v.$accent-rgb, .8);
 }
 
 .sr-only{
@@ -86,8 +86,8 @@ a{
 
     display: flex;
     flex-direction: column;
-    align-items: center;        // horizontal
-    justify-content: center;    // vertical
+    align-items: center;        
+    justify-content: center;   
 
     > *{
         width: 100%;           

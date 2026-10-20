@@ -17,7 +17,7 @@
     backdrop-filter: blur(1rem);
     border: 0;
     border-radius: 50%;
-    box-shadow: 0 1rem 2.8rem -.8rem rgba(0, 0, 0, .6);
+    box-shadow: 0 1rem 2.8rem -.8rem rgba(v.$shadow-rgb, .6);
     cursor: pointer;
     opacity: 0;
     visibility: hidden;

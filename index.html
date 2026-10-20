@@ -1526,72 +1526,6 @@
                 </div>
 
             </div>
-
-            <!-- <div class="academic">
-                <span class="section-name">04 / Formación</span>
-                <h2 class="section-title">Formación académica</h2>
-                <p class="section-subtitle">Del TSU a la ingeniería en desarrollo de software, ambos títulos en la misma universidad.</p>
-
-
-                <div class="education-timeline">
-                    <ol class="education-steps">
-                        <li class="education-item education-item-technician reveal">
-                            <article class="education-card education-card-technician">
-                                <div class="education-card-header">
-                                    <span class="education-seal">
-                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" >
-                                            <circle cx="12" cy="9" r="6" />
-                                            <path d="m9 9 2 2 3.5-4" />
-                                            <path d="M8.5 14 7 22l5-3 5 3-1.5-8" />
-                                        </svg>  
-                                    </span>
-                                    <span class="education-level">Nivel 01</span>
-                                    <span class="education-year">2021</span>
-                                </div>
-                                <h3 class="education-degree">TSU en Tecnologías de la Información, Área Desarrollo de Software</h3>
-                                <p class="education-school">Universidad Tecnológica de Puebla</p>
-                                <span class="education-status">
-                                    <i class="bx bx-check"></i>
-                                    Titulado
-                                </span>
-                            </article>
-                        </li>
-                        <li class="education-item education-item-engineering reveal">
-                            <article class="education-card education-card-engineering">
-                                <div class="education-card-header">
-                                    <span class="education-seal">
-                                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" >
-                                            <circle cx="12" cy="9" r="6" />
-                                            <path d="m9 9 2 2 3.5-4" />
-                                            <path d="M8.5 14 7 22l5-3 5 3-1.5-8" />
-                                        </svg>  
-                                    </span>
-                                    <span class="education-level">Nivel 02</span>
-                                    <span class="education-year">2023</span>
-                                </div>
-                                <h3 class="education-degree">Ingeniería en Gestión y Desarrollo de Software</h3>
-                                <p class="education-school">Universidad Tecnológica de Puebla</p>
-                                <span class="education-status">
-                                    <i class="bx bx-check"></i>
-                                    Titulado
-                                </span>
-                            </article>
-                        </li>
-                    </ol>
-
-                    <div class="education-summary reveal">
-                        <span class="education-summary-item">
-                            <b class="education-summary-value">2</b> títulos
-                        </span>
-                        <span class="education-summary-item">
-                            <b class="education-summary-value">1</b> universidad
-                        </span>
-                        <span class="education-summary-item">
-                            <b class="education-summary-value">Inglés</b> nivel básico
-                        </span>
-                    </div>
-                </div>
-            </div> -->
             <div class="academic">
                 <span class="section-name">04 / Formación</span>
                 <h2 class="section-title">Formación académica</h2>
@@ -1860,7 +1794,6 @@
             </div>
         </section>
 
-        
         <section class="container section section-height" id="contact">
             <div class="contact-layout">
                 <div class="contact-info reveal">
@@ -2047,6 +1980,30 @@
      </button>
 
      <div class="toast" id="toast"></div>
+
+     <button onclick="setTheme(this)">Dark</button>
+     <button onclick="setTheme(this)">Esmerald</button>
+     <button onclick="setTheme(this)">Sunset</button>
+
+     <script>
+        const root = document.documentElement;
+        const themes = ['dark', 'esmerald', 'sunset'];
+
+        function setTheme(theme){
+            const value = theme.textContent.toLowerCase()
+            if(!themes.includes(value)) return;
+
+            if(value === 'dark'){
+                root.removeAttribute("data-theme");
+            }else{
+                root.setAttribute("data-theme", value)
+            }
+            localStorage.setItem("theme", value);
+        }
+        const savedTheme = localStorage.getItem("theme");
+        setTheme(themes.includes(savedTheme) ? savedTheme : "dark");
+
+     </script>
 
      <script type="module" src="build/js/main.js"></script>
 </body>

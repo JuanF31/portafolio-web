@@ -7,6 +7,7 @@ import { Progress } from './modules/progressBar.js';
 import { Writer } from './modules/textChange.js';
 import { Top } from './modules/toTop.js';
 import { Copy } from './modules/copy.js';
+//import { Theme } from './modules/theme.js';
 
 const header = Header();
 Active(header);
@@ -17,3 +18,5 @@ Writer();
 Top();
 Copy();
 Loader();
+
+

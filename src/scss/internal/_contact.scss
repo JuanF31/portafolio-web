@@ -40,11 +40,11 @@
         gap: 1.4rem;
         padding: 1.2rem 1.4rem;
         color: v.$text-main;
-        background-color: rgba(30, 41, 59, .6);
+        background-color: rgba(v.$card-rgb, .6);
         border-radius: 1.2rem;
         
         &:is(a):hover {
-            background-color: rgba(255, 255, 255, .04);
+            background-color: rgba(v.$overlay-rgb, .04);
         }
 
         .contact-row-icon{

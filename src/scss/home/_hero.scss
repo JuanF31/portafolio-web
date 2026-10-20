@@ -18,7 +18,7 @@
         top: 12%;
         z-index: -1;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(56, 189, 248, .22), transparent 65%);
+        background: radial-gradient(circle, rgba(v.$accent-rgb, .22), transparent 65%);
         filter: blur(3rem);
         opacity: .4;
         animation: orb 9s ease-in-out infinite;
@@ -68,10 +68,10 @@
         font-weight: 600;
         letter-spacing: .04em;
         color: v.$primary-accent;
-        background: rgba(56, 189, 248, .06);
-        border: .1rem solid rgba(56, 189, 248, .4);
+        background: rgba(v.$accent-rgb, .06);
+        border: .1rem solid rgba(v.$accent-rgb, .4);
         border-radius: 99.9rem;
-        box-shadow: 0 0 2.4rem -.6rem rgba(56, 189, 248, .4);
+        box-shadow: 0 0 2.4rem -.6rem rgba(v.$accent-rgb, .4);
         @include m.fade-in-up;
 
         &::before{
@@ -103,7 +103,6 @@
             color: transparent;
         }
         .text-real {
-            background-color: red;
             display: inline-block;
             width: .3rem;
             height: .85em;

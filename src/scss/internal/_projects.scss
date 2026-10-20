@@ -107,7 +107,7 @@
     background: v.$card-bg;
     border: .1rem solid v.$border-color;
     border-radius: 1.2rem;
-    box-shadow: 0 3rem 6rem -2.5rem rgba(0, 0, 0, .7), 0 0 0 .1rem rgba(v.$accent-rgb, .06);
+    box-shadow: 0 3rem 6rem -2.5rem rgba(v.$shadow-rgb, .7), 0 0 0 .1rem rgba(v.$accent-rgb, .06);
     transition: border-color .3s, transform .4s, box-shadow .4s;
     cursor: pointer;
 

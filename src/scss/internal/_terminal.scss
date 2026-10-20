@@ -2,10 +2,10 @@
 
 .contact-terminal{
     background-color: v.$card-bg;
-    border: .1rem solid rgba(56, 189, 248, .3);
+    border: .1rem solid rgba(v.$accent-rgb, .3);
     border-radius: 1.2rem;
     overflow: hidden;
-    box-shadow: 0 3rem 7rem -2.5rem rgba(56, 189, 248, .35);
+    box-shadow: 0 3rem 7rem -2.5rem rgba(v.$accent-rgb, .35);
 }
 
 .terminal-body{
@@ -25,7 +25,7 @@
         color: v.$text-muted;
 
         &.term-success{
-            color: #4ade80;
+            color: v.$ok;
         }
     }
     .terminal-btn{
@@ -34,10 +34,10 @@
         margin-top: .8rem;
         text-align: center;
         font-family: v.$font-family;
-        box-shadow: 0 .6rem 1.6rem -.8rem rgba(56, 189, 248, .35);
+        box-shadow: 0 .6rem 1.6rem -.8rem rgba(v.$accent-rgb, .35);
 
         &:hover{
-            box-shadow: 0 .8rem 2rem -.8rem rgba(56, 189, 248, .5);
+            box-shadow: 0 .8rem 2rem -.8rem rgba(v.$accent-rgb, .5);
         }
     }
 }
