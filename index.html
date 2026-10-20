@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="build/css/app.css">
     <title>Juan Francisco Hernández Sebastián · Desarrollador de Software</title>
+    <script>
+        try{
+            var t=localStorage.getItem("theme");
+            if(!/^(dark|esmerald|sunset)$/.test(t))
+            t=null;
+            if(t)document.documentElement.setAttribute("data-theme",t)
+        }catch(e){}
+    </script>
 </head>
 <body>
     
