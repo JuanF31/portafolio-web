@@ -21,7 +21,7 @@
     <script>
         try{
             var t=localStorage.getItem("theme");
-            if(!/^(dark|esmerald|sunset)$/.test(t))
+            if(!/^(dark|esmerald|sunset|violet|crimson|graphite|pink)$/.test(t))
             t=null;
             if(t)document.documentElement.setAttribute("data-theme",t)
         }catch(e){}
@@ -34,7 +34,7 @@
         <div class="loader-ring" ></div>
         <span class="sr-only">Cargando...</span>
     </div>
-    <div class="progress" ></div>
+    <div class="progress"></div>
 
     <!-- NAVBAR -->
      <header class="header" id="header">
@@ -103,6 +103,15 @@
                             <span>Descargar CV</span>
                             <i class="bx bx-download"></i>
                         </a>
+                    </div>
+                    <div>
+                        <button onclick="setTheme(this)">Dark</button>
+                        <button onclick="setTheme(this)">Esmerald</button>
+                        <button onclick="setTheme(this)">Sunset</button>
+                        <button onclick="setTheme(this)">Violet</button>
+                        <button onclick="setTheme(this)">Crimson</button>
+                        <button onclick="setTheme(this)">Graphite</button>
+                        <button onclick="setTheme(this)">Pink</button>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -1989,16 +1998,12 @@
 
      <div class="toast" id="toast"></div>
 
-     <button onclick="setTheme(this)">Dark</button>
-     <button onclick="setTheme(this)">Esmerald</button>
-     <button onclick="setTheme(this)">Sunset</button>
-
      <script>
         const root = document.documentElement;
-        const themes = ['dark', 'esmerald', 'sunset'];
+        const themes = ['dark', 'esmerald', 'sunset', 'violet', 'crimson', 'graphite', 'pink'];
 
         function setTheme(theme){
-            const value = theme.textContent.toLowerCase()
+            const value = theme.textContent.toLowerCase();
             if(!themes.includes(value)) return;
 
             if(value === 'dark'){

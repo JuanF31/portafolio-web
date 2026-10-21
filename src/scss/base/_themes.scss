@@ -79,3 +79,163 @@
     --accent-soft: #FDBA74;
     --on-accent: #2A1105;
 }
+
+/* ========== VIOLET THEME ========== */
+:root[data-theme="violet"]{
+    --bg-color: #140F24;
+    --card-bg: #1F1836;
+    --text-main: #F5F3FF;
+    --text-muted: #A79FC4;
+    --border-color: #3A3060;
+    --primary-accent: #A78BFA;
+    --secondary-accent: #E879F9;
+
+    --accent-rgb: 167, 139, 250;
+    --accent2-rgb: 232, 121, 249;
+    --bg-rgb: 20, 15, 36;
+    --card-rgb: 31, 24, 54;
+    --muted-rgb: 167, 159, 196;
+    --deep-rgb: 13, 9, 25;
+    --overlay-rgb: 255, 255, 255;
+
+    --bg-deep: #0D0919;
+    --bg-deeper: #181230;
+    --bg-darkest: #080511;
+    --border-strong: #54478A;
+    --accent-soft: #C4B5FD;
+    --on-accent: #1B0F3D;
+}
+
+/* ========== CRIMSON THEME ========== */
+:root[data-theme="crimson"]{
+    --bg-color: #170B0E;
+    --card-bg: #261419;
+    --text-main: #FEF2F2;
+    --text-muted: #C9A3A8;
+    --border-color: #4A2A30;
+    --primary-accent: #F43F5E;
+    --secondary-accent: #FBBF24;
+
+    --accent-rgb: 244, 63, 94;
+    --accent2-rgb: 251, 191, 36;
+    --bg-rgb: 23, 11, 14;
+    --card-rgb: 38, 20, 25;
+    --muted-rgb: 201, 163, 168;
+    --deep-rgb: 16, 7, 10;
+    --overlay-rgb: 255, 255, 255;
+
+    --bg-deep: #20070A;
+    --bg-deeper: #1F1014;
+    --bg-darkest: #0A0406;
+    --border-strong: #6B3F47;
+    --accent-soft: #FDA4AF;
+    --on-accent: #2A0610;
+}
+
+/* ========== GRAPHITE THEME ========== */
+:root[data-theme="graphite"]{
+    --bg-color: #0A0A0A;
+    --card-bg: #171717;
+    --text-main: #FAFAFA;
+    --text-muted: #A3A3A3;
+    --border-color: #2E2E2E;
+    --primary-accent: #E5E5E5;
+    --secondary-accent: #A3A3A3;
+
+    --accent-rgb: 229, 229, 229;
+    --accent2-rgb: 163, 163, 163;
+    --bg-rgb: 10, 10, 10;
+    --card-rgb: 23, 23, 23;
+    --muted-rgb: 163, 163, 163;
+    --deep-rgb: 5, 5, 5;
+    --overlay-rgb: 255, 255, 255;
+
+    --bg-deep: #050505;
+    --bg-deeper: #101010;
+    --bg-darkest: #030303;
+    --border-strong: #525252;
+    --accent-soft: #D4D4D4;
+    --on-accent: #0A0A0A;
+}
+
+/* ========== PINK THEME ========== */
+:root[data-theme="pink"]{
+    --bg-color: #1C0F17;
+    --card-bg: #2B1824;
+    --text-main: #FDF2F8;
+    --text-muted: #C9A3B6;
+    --border-color: #4A2A3C;
+    --primary-accent: #F472B6;
+    --secondary-accent: #FDA4AF;
+
+    --accent-rgb: 244, 114, 182;
+    --accent2-rgb: 253, 164, 175;
+    --bg-rgb: 28, 15, 23;
+    --card-rgb: 43, 24, 36;
+    --muted-rgb: 201, 163, 182;
+    --deep-rgb: 21, 10, 16;
+    --overlay-rgb: 255, 255, 255;
+
+    --bg-deep: #150A10;
+    --bg-deeper: #24131D;
+    --bg-darkest: #0E060A;
+    --border-strong: #6B3D56;
+    --accent-soft: #F9A8D4;
+    --on-accent: #2A0A1A;
+}
+
+/* ========== COPPER THEME ========== */
+:root[data-theme="copper"]{
+}
+
+/* ========== FOREST THEME ========== */
+:root[data-theme="forest"]{
+}
+
+/* ========== MIDNIGHT THEME ========== */
+:root[data-theme="midnight"]{
+}
+
+/* ========== LIGHT THEME ========== */
+:root[data-theme="light"]{
+}
+
+/* ========== MINT THEME ========== */
+:root[data-theme="mint"]{
+}
+
+/* ========== PAPER THEME ========== */
+:root[data-theme="paper"]{
+}
+
+/* ========== LAVENDER THEME ========== */
+:root[data-theme="lavender"]{
+}
+
+/* ========== LEMON THEME ========== */
+:root[data-theme="lemon"]{
+}
+
+/* ========== SAKURA THEME ========== */
+:root[data-theme="sakura"]{
+}
+
+/* ========== DIA DE MUERTOS THEME ========== */
+:root[data-theme="dia-de-muertos"]{
+}
+
+/* ========== TALAVERA THEME ========== */
+:root[data-theme="talavera"]{
+}
+
+/* ========== ALEBRIJE THEME ========== */
+:root[data-theme="alebrije"]{
+}
+
+/* ========== AXOLOTL THEME ========== */
+:root[data-theme="axolotl"]{
+}
+
+/* ========== HIGH CONTRAST THEME ========== */
+:root[data-theme="high-contrast"]{
+}
