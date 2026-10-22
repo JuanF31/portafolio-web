@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://juanf31.github.io/portafolio-web/">
     <meta property="og:image" content="https://juanf31.github.io/portafolio-web/build/img/juan-hernandez.png">
     <meta property="og:image:alt" content="Juan Francisco Hernández Sebastián">
-    <link rel="shortcut icon" href="build/img/icon.ico" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" id="favicon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='monospace' font-size='19' font-weight='bold'%3E%3Ctspan fill='%2338bdf8'%3E%26lt;%3C/tspan%3E%3Ctspan fill='%23ffffff'%3EJH%3C/tspan%3E%3Ctspan fill='%2338bdf8'%3E/%26gt;%3C/tspan%3E%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="build/css/app.css">
     <title>Juan Francisco Hernández Sebastián · Desarrollador de Software</title>
@@ -99,19 +99,10 @@
                     <div class="action-group">
                         <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
                         <a href="#contact" class="btn btn-secondary">Contactar</a>
-                        <a href="build/CV - JUAN FRANCISCO HERNANDEZ SEBASTIAN.pdf" target="_blank" class="cv-link">
+                        <a href="build/CV - JFHS.pdf" target="_blank" class="cv-link">
                             <span>Descargar CV</span>
                             <i class="bx bx-download"></i>
                         </a>
-                    </div>
-                    <div>
-                        <button onclick="setTheme(this)">Dark</button>
-                        <button onclick="setTheme(this)">Esmerald</button>
-                        <button onclick="setTheme(this)">Sunset</button>
-                        <button onclick="setTheme(this)">Violet</button>
-                        <button onclick="setTheme(this)">Crimson</button>
-                        <button onclick="setTheme(this)">Graphite</button>
-                        <button onclick="setTheme(this)">Pink</button>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -1988,6 +1979,30 @@
         </div>
      </footer>
 
+     <div class="theme-switch" id="theme-switch">
+        <button type="button" class="theme-toggle" id="theme-toggle" title="Cambiar tema de color">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.3-.5-.8-.5-1.2 0-1.1.9-2 2-2H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15.5" cy="7.5" r="1" fill="currentColor"/></svg>
+        </button>
+        <div class="theme-menu" id="theme-menu">
+            <div class="theme-menu-head">
+                <span class="theme-menu-title">Tema de color</span>
+                <span class="theme-current" id="theme-current"></span>
+            </div>
+            <div class="theme-group">
+                <span class="theme-group-title">Oscuros</span>
+                <div class="theme-grid">
+                    <button type="button" class="theme-option" data-theme="dark" aria-pressed="false" title="Oscuro" style="--sw-bg:#0f172a;--sw-a:#38bdf8;--sw-b:#818cf8"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="esmerald" aria-pressed="false" title="Esmeralda" style="--sw-bg:#0a1512;--sw-a:#34d399;--sw-b:#2dd4bf"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="sunset" aria-pressed="false" title="Atardecer" style="--sw-bg:#1a1015;--sw-a:#fb923c;--sw-b:#f472b6"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="violet" aria-pressed="false" title="Violeta" style="--sw-bg:#140f24;--sw-a:#a78bfa;--sw-b:#e879f9"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="crimson" aria-pressed="false" title="Carmesí" style="--sw-bg:#170b0e;--sw-a:#f43f5e;--sw-b:#fbbf24"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="graphite" aria-pressed="false" title="Grafito" style="--sw-bg:#0a0a0a;--sw-a:#e5e5e5;--sw-b:#a3a3a3"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="pink" aria-pressed="false" title="Rosa" style="--sw-bg:#1c0f17;--sw-a:#f472b6;--sw-b:#fda4af"><span class="theme-swatch"></span></button>
+                </div>
+            </div>
+        </div>
+     </div>
+
      <button class="top" id="top" type="button" aria-label="Volver arriba">
         <svg class="top-ring" viewBox="0 0 46 46" aria-hidden="true" focusable="false">
             <circle class="top-track" cx="23" cy="23" r="21"></circle>
@@ -1998,12 +2013,12 @@
 
      <div class="toast" id="toast"></div>
 
-     <script>
+     <!-- <script>
         const root = document.documentElement;
         const themes = ['dark', 'esmerald', 'sunset', 'violet', 'crimson', 'graphite', 'pink'];
 
         function setTheme(theme){
-            const value = theme.textContent.toLowerCase();
+            const value = theme.dataset.theme;
             if(!themes.includes(value)) return;
 
             if(value === 'dark'){
@@ -2016,7 +2031,7 @@
         const savedTheme = localStorage.getItem("theme");
         setTheme(themes.includes(savedTheme) ? savedTheme : "dark");
 
-     </script>
+     </script> -->
 
      <script type="module" src="build/js/main.js"></script>
 </body>

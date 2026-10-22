@@ -1,0 +1,211 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.theme-switch{
+    position: fixed;
+    right: 1.6rem;
+    z-index: v.$z-fixed-150;
+    bottom: calc(9.2rem + 4.6rem + 1.2rem + env(safe-area-inset-bottom, 0rem));
+
+    @include m.tablet {
+        right: 2.8rem;
+        bottom: calc(2.8rem + 4.6rem + 1.2rem);
+    }
+
+    .theme-toggle{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.6rem;
+        height: 4.6rem;
+        padding: 0;
+        color: v.$primary-accent;
+        background: color-mix(in srgb, v.$bg-color 90%, transparent);
+        backdrop-filter: blur(1rem);
+        border: .1rem solid color-mix(in srgb, v.$primary-accent 30%, transparent);
+        border-radius: 50%;
+        box-shadow: 0 1rem 2.8rem -.8rem rgba(v.$shadow-rgb, .6);
+        cursor: pointer;
+        transition: background .25s, transform .25s, border-color .25s;
+
+        &:hover{
+            background: color-mix(in srgb, v.$primary-accent 14%, transparent);
+            border-color: v.$primary-accent;
+            transform: translateY(-.1rem);
+        }
+
+        svg{
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+}
+
+.theme-toggle,
+.theme-option{
+    &:focus-visible{
+        outline: .2rem solid v.$primary-accent;
+        outline-offset: .2rem;
+    }
+}
+
+.theme-menu{
+    position: absolute;
+    bottom: calc(100% + 1rem);
+    right: 0;
+    z-index: v.$z-top-layer;
+    width: 33rem;
+    padding: 1.4rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: color-mix(in srgb, v.$card-bg 96%, transparent);
+    backdrop-filter: blur(1.4rem);
+    border: .1rem solid v.$border-color;
+    border-radius: 1.4rem;
+    box-shadow: 0 1.8rem 4rem -1.2rem rgba(v.$shadow-rgb, .5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(.6rem) scale(.98);
+    transform-origin: bottom right;
+    transition: opacity .2s, transform .2s, visibility .2s;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, v.$primary-accent 35%, transparent) transparent;
+    scrollbar-gutter: stable;
+    --ft: 0rem;
+    --fb: 0rem;
+
+    @media (max-width: 575px) {
+        position: fixed;
+        top: auto;
+        bottom: calc(9.2rem + 4.6rem + 1.2rem + 4.6rem + 1rem + env(safe-area-inset-bottom, 0rem));
+        left: 1.2rem;
+        right: 1.2rem;
+        width: auto;
+        transform: bottom center;
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        position: sticky;
+        bottom: -1.4rem;
+        height: var(--fb);
+        margin: calc(var(--fb) * -1) -1.4rem -1.4rem;
+        pointer-events: none;
+        background: linear-gradient(to top, color-mix(in srgb, v.$card-bg 98%, transparent), transparent);
+    }
+
+    &:hover{
+        scrollbar-color: color-mix(in srgb, v.$primary-accent 70%, transparent) transparent;
+    }
+
+    &.open{
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+
+.theme-menu-head{
+    position: sticky;
+    top: -1.4rem;
+    z-index: v.$z-fixed;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: -1.4rem -1.4rem 0;
+    padding: 1.4rem 1.4rem .6rem;
+    background: color-mix(in srgb, v.$card-bg 98%, transparent);
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        top: 100%;
+        height: var(--ft);
+         background: linear-gradient(to bottom, color-mix(in srgb, v.$card-bg 98%, transparent), transparent);
+    }
+
+    .theme-menu-title{
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: v.$text-muted;
+    }
+}
+
+.theme-group{
+    margin-top: 1.2rem;
+
+    .theme-group-title{
+        display: block;
+        margin-bottom: .6rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+        color: v.$text-muted;
+    }
+    .theme-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+        gap: .6rem;
+
+        .theme-option{
+            display: grid;
+            place-items: center;
+            aspect-ratio: 1;
+            padding: 0;
+            background: none;
+            border: 0;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+
+            &:hover,
+            &:focus-visible{
+                background: color-mix(in srgb, v.$primary-accent 12%, transparent);
+                transform: translateY(-.2rem);
+            }
+        }
+    }
+    .theme-swatch{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: .3rem solid var(--sw-bg);
+        background: linear-gradient(135deg, var(--sw-a) 50%, var(--sw-b) 50%);
+        box-shadow: 0 0 0 .1rem v.$border-strong;
+        transition: box-shadow .25s;
+    }
+}
+
+.theme-option[aria-pressed="true"]{
+    .theme-swatch{
+        box-shadow: 0 0 0 .2rem v.$card-bg, 0 0 0 .4rem v.$primary-accent;
+    }
+}
+
+.theme-current {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: v.$primary-accent;
+}
+
+::view-transition-old(root),
+::view-transition-new(root){
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root){
+    z-index: 1;
+}
+::view-transition-new(root){
+    z-index: 2;
+}
