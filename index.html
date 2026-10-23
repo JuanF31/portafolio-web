@@ -1998,6 +1998,35 @@
                     <button type="button" class="theme-option" data-theme="crimson" aria-pressed="false" title="Carmesí" style="--sw-bg:#170b0e;--sw-a:#f43f5e;--sw-b:#fbbf24"><span class="theme-swatch"></span></button>
                     <button type="button" class="theme-option" data-theme="graphite" aria-pressed="false" title="Grafito" style="--sw-bg:#0a0a0a;--sw-a:#e5e5e5;--sw-b:#a3a3a3"><span class="theme-swatch"></span></button>
                     <button type="button" class="theme-option" data-theme="pink" aria-pressed="false" title="Rosa" style="--sw-bg:#1c0f17;--sw-a:#f472b6;--sw-b:#fda4af"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="copper" aria-pressed="false" title="Cobre" style="--sw-bg:#17110e;--sw-a:#e68f55;--sw-b:#3dbfa8"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="forest" aria-pressed="false" title="Bosque" style="--sw-bg:#131a12;--sw-a:#a3e635;--sw-b:#f5b942"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="midnight" aria-pressed="false" title="Medianoche dorada" style="--sw-bg:#0b0b10;--sw-a:#e5b94a;--sw-b:#f3e2b0"><span class="theme-swatch"></span></button>
+                </div>
+            </div>
+            <div class="theme-group">
+                <span class="theme-group-title">Claros</span>
+                <div class="theme-grid">
+                    <button type="button" class="theme-option" data-theme="light" aria-pressed="false" title="Claro" style="--sw-bg:#f8fafc;--sw-a:#0284c7;--sw-b:#4f46e5"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="mint" aria-pressed="false" title="Menta" style="--sw-bg:#f0fdf4;--sw-a:#059669;--sw-b:#0d9488"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="paper" aria-pressed="false" title="Papel" style="--sw-bg:#faf6ef;--sw-a:#c2410c;--sw-b:#0f766e"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="lavender" aria-pressed="false" title="Lavanda" style="--sw-bg:#f5f3ff;--sw-a:#6d28d9;--sw-b:#db2777"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="lemon" aria-pressed="false" title="Limón" style="--sw-bg:#fbfce6;--sw-a:#4d7c0f;--sw-b:#b45309"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="sakura" aria-pressed="false" title="Sakura" style="--sw-bg:#fff1f5;--sw-a:#be185d;--sw-b:#7e22ce"><span class="theme-swatch"></span></button>
+                </div>
+            </div>
+            <div class="theme-group">
+                <span class="theme-group-title">México</span>
+                <div class="theme-grid">
+                    <button type="button" class="theme-option" data-theme="dia-de-muertos" aria-pressed="false" title="Día de Muertos" style="--sw-bg:#130a1c;--sw-a:#ff9f1c;--sw-b:#e6399b"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="talavera" aria-pressed="false" title="Talavera" style="--sw-bg:#f6f3ea;--sw-a:#1e40af;--sw-b:#a14a08"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="alebrije" aria-pressed="false" title="Alebrije" style="--sw-bg:#160a28;--sw-a:#ff4fa3;--sw-b:#22d3b0"><span class="theme-swatch"></span></button>
+                    <button type="button" class="theme-option" data-theme="axolotl" aria-pressed="false" title="Ajolote" style="--sw-bg:#08202b;--sw-a:#ff8fb1;--sw-b:#5eead4"><span class="theme-swatch"></span></button>
+                </div>
+            </div>
+            <div class="theme-group">
+                <span class="theme-group-title">Accesibilidad</span>
+                <div class="theme-grid">
+                    <button type="button" class="theme-option" data-theme="high-contrast" aria-pressed="false" title="Alto contraste" style="--sw-bg:#000000;--sw-a:#ffd60a;--sw-b:#3ddcff"><span class="theme-swatch"></span></button>
                 </div>
             </div>
         </div>
@@ -2012,27 +2041,6 @@
      </button>
 
      <div class="toast" id="toast"></div>
-
-     <!-- <script>
-        const root = document.documentElement;
-        const themes = ['dark', 'esmerald', 'sunset', 'violet', 'crimson', 'graphite', 'pink'];
-
-        function setTheme(theme){
-            const value = theme.dataset.theme;
-            if(!themes.includes(value)) return;
-
-            if(value === 'dark'){
-                root.removeAttribute("data-theme");
-            }else{
-                root.setAttribute("data-theme", value)
-            }
-            localStorage.setItem("theme", value);
-        }
-        const savedTheme = localStorage.getItem("theme");
-        setTheme(themes.includes(savedTheme) ? savedTheme : "dark");
-
-     </script> -->
-
      <script type="module" src="build/js/main.js"></script>
 </body>
 </html>

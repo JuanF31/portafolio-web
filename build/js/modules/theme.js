@@ -17,9 +17,9 @@ function updateFavicon() {
 
   const styles = getComputedStyle(root);
 
-  const background = styles.getPropertyValue('--bg-color').trim();
-  const accent = styles.getPropertyValue('--primary-accent').trim();
-  const text = styles.getPropertyValue('--text-main').trim();
+  const background = styles.getPropertyValue('--primary-accent').trim();
+  const accent = styles.getPropertyValue('--text-main').trim();
+  const text = styles.getPropertyValue('--bg-color').trim();
 
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg"
